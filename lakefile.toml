@@ -1,0 +1,22 @@
+name = "PathLocalDAG"
+version = "0.1.0"
+keywords = ["causal-dag", "partial-orders", "formalization"]
+defaultTargets = ["PathLocalDAG"]
+
+[leanOptions]
+pp.unicode.fun = true
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.24.0"
+
+[[require]]
+name = "DagTesting"
+git = "https://github.com/eduardo-zambrano/DagTesting.git"
+rev = "main"
+
+[[lean_lib]]
+name = "PathLocalDAG"
