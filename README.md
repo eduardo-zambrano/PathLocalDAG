@@ -1,7 +1,7 @@
 # PathLocalDAG
 
 Lean 4 formalization for Eduardo Zambrano, *Path signatures of causal DAGs:
-ancestral recovery and exact limits on edge identification* (2026).
+ancestral recovery and edge identification* (2026).
 
 Targeted paper results:
 

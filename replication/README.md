@@ -1,7 +1,7 @@
 # Computational replication
 
 This directory reproduces Table 1 and the two-panel explanatory figure in
-*Path signatures of causal DAGs: ancestral recovery and exact limits on edge
+*Path signatures of causal DAGs: ancestral recovery and edge
 identification*.
 
 ## Table 1
