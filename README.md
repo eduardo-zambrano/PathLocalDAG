@@ -7,7 +7,10 @@ This is the standalone formal development for the current paper.
 
 Targeted paper results:
 
-- Lemma 2.2: `signature_eq_iff_reverse`.
+- Lemma 2.2: `concreteSignature_eq_iff_reverse`, with
+  `concreteSignature_eq_iff_signature_eq` and
+  `fullConcreteSignatures_eq_iff_fullSignatures_eq` bridging the paper's
+  concrete signature to the reversal-class representation used downstream.
 - Theorem 3.1: `recovery_from_path_signatures` and
   `fullSignatures_eq_all_of_atMostOne` (including the exceptional class).
 - Lemma 3.2: `chiConstant_iff_comparable`.
@@ -26,10 +29,14 @@ Targeted paper results:
 
 The paper's vertices are represented by `Fin n`.  A `FinitePoset n` is an
 explicit partial-order relation, and a `VertexOrder n` is an explicit total
-order.  An unoriented labeled Hamiltonian path is represented by the
-reversal class `s(L, L.reverse) : Sym2 (VertexOrder n)`.  Directed graphs are
-finite sets of ordered pairs, with reachability given by
-`Relation.TransGen`.
+order. `ConcretePathSignature n` records exactly the paper's two objects: the
+endpoint set and the set of unordered consecutive labeled pairs. The theorem
+`concreteSignature_eq_iff_reverse` proves directly that this concrete object
+determines a nonempty vertex order up to reversal. The bridge theorem then
+identifies equality of concrete signatures with equality of the canonical
+reversal classes `s(L, L.reverse) : Sym2 (VertexOrder n)` used by the recovery
+and fiber modules. Directed graphs are finite sets of ordered pairs, with
+reachability given by `Relation.TransGen`.
 
 The exact fiber theorem is constructive: `choicesEquivFiber` is an explicit
 equivalence between subsets of the non-cover comparable pairs and all edge

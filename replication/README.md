@@ -1,7 +1,8 @@
 # Computational replication
 
 This directory reproduces Table 1 and the two-panel explanatory figure in
-*What Path-Local Summaries Can Identify About a Causal DAG*.
+*Path signatures of causal DAGs: ancestral recovery and exact limits on edge
+identification*.
 
 ## Table 1
 
