@@ -53,3 +53,17 @@ lake build
 
 The development targets Lean 4 / mathlib `v4.24.0` and contains no `sorry`,
 `admit`, or project-local axioms.
+
+## Computational replication
+
+The `replication/` directory contains the base-R exhaustive enumeration that
+generates Table 1 and the TikZ source for the paper's two-panel explanatory
+figure:
+
+```bash
+cd replication
+make
+```
+
+The enumeration and figure are computational audits; none of the general
+theorems depends on them.
