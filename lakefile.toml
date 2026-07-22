@@ -13,10 +13,5 @@ name = "mathlib"
 scope = "leanprover-community"
 rev = "v4.24.0"
 
-[[require]]
-name = "DagTesting"
-git = "https://github.com/eduardo-zambrano/DagTesting.git"
-rev = "main"
-
 [[lean_lib]]
 name = "PathLocalDAG"

@@ -1,5 +1,4 @@
 import PathLocalDAG.Fibers
-import DagTesting.MIEquivCollapse
 
 /-!
 # Carbery functionals as path-signature observables
@@ -9,10 +8,6 @@ consecutive bivariate marginals along an unoriented path.  Symmetry
 `p_{uv}(a,b) = p_{vu}(b,a)` makes that expression a function of the path
 signature rather than of an oriented ordering.  `CarberyFormula` records
 that fact at exactly the abstraction level used by Proposition 6.1.
-
-The final theorem in this file also connects to the earlier finite-state
-implementation: its fixed-permutation DAG blindness was already proved for
-the concrete `dagCarberyFunctional`.
 -/
 
 namespace PathLocalDAG
@@ -54,35 +49,5 @@ theorem carbery_full_signature_blindness {n : ℕ} {α : Type*}
     (h : dagSignatureSet G = dagSignatureSet H) :
     aggregate (dagSignatureSet G) = aggregate (dagSignatureSet H) :=
   congrArg aggregate h
-
-/-! ## Bridge to the earlier concrete finite-state implementation -/
-
-namespace FiniteStateBridge
-
-open DagTesting
-
-variable {Ω : Fin 3 → Type*} [∀ i, Fintype (Ω i)]
-  [∀ i, DecidableEq (Ω i)]
-
-/-- The concrete finite-state bivariate marginal is symmetric.  This is the
-analytic fact that allows its consecutive-pair product to descend to an
-unoriented path signature. -/
-theorem bivariate_marginal_symmetric (p : JointPMF Ω)
-    (i j : Fin 3) (hij : i ≠ j) (s : Ω i) (t : Ω j) :
-    p.bivariateAny i j hij s t =
-      p.bivariateAny j i hij.symm t s :=
-  JointPMF.bivariateAny_comm p i j hij s t
-
-/-- The already checked concrete finite-state Q depends on the DAG only
-through the selected ordering permutation. -/
-theorem concrete_q_fixed_order_blindness
-    (G₁ G₂ : FinDAG 3) (p : JointPMF Ω)
-    (π₁ : TopologicalOrdering G₁) (π₂ : TopologicalOrdering G₂)
-    (hperm : π₁.perm = π₂.perm) :
-    dagCarberyFunctional (by omega) G₁ p π₁ =
-      dagCarberyFunctional (by omega) G₂ p π₂ :=
-  qn_blind_to_dag_given_perm (by omega) G₁ G₂ p π₁ π₂ hperm
-
-end FiniteStateBridge
 
 end PathLocalDAG

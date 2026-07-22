@@ -1,11 +1,9 @@
 # PathLocalDAG
 
-Lean 4 formalization for Eduardo Zambrano, What Path-Local Summaries Can
-Identify About a Causal DAG (2026).
+Lean 4 formalization for Eduardo Zambrano, *Path signatures of causal DAGs:
+ancestral recovery and exact limits on edge identification* (2026).
 
-This is the current-paper development. Its combinatorial core is separate
-from the historical test-centered modules in `DagTesting`; a narrow bridge
-reuses the already checked finite-state Carbery functional.
+This is the standalone formal development for the current paper.
 
 Targeted paper results:
 
@@ -22,8 +20,7 @@ Targeted paper results:
 - Proposition 5.2: `signature_measurability` and
   `full_signature_aggregation_eq`.
 - Proposition 6.1: `carbery_signature_blindness` and
-  `carbery_full_signature_blindness`, with the concrete finite-state bridge
-  `FiniteStateBridge.concrete_q_fixed_order_blindness`.
+  `carbery_full_signature_blindness`.
 
 ## Design
 
@@ -41,9 +38,7 @@ used.
 
 For Proposition 6.1, `CarberyFormula` records the mathematical observation
 proved in the paper before the proposition: symmetry of the bivariate
-marginals makes the formula a function of an unoriented path signature.  The
-bridge module separately imports the earlier concrete finite-state marginal
-symmetry and fixed-order DAG-blindness theorems.
+marginals makes the formula a function of an unoriented path signature.
 
 ## Build
 
@@ -65,5 +60,5 @@ cd replication
 make
 ```
 
-The enumeration and figure are computational audits; none of the general
+The enumeration and figure illustrate the general results; none of the
 theorems depends on them.
