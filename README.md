@@ -3,8 +3,6 @@
 Lean 4 formalization for Eduardo Zambrano, *Path signatures of causal DAGs:
 ancestral recovery and exact limits on edge identification* (2026).
 
-This is the standalone formal development for the current paper.
-
 Targeted paper results:
 
 - Lemma 2.2: `concreteSignature_eq_iff_reverse`, with
