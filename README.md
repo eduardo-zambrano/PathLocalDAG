@@ -3,7 +3,7 @@
 Lean 4 formalization for Eduardo Zambrano, *Path signatures of causal DAGs:
 ancestral recovery and edge identification* (2026).
 
-Targeted paper results:
+The development machine-checks the paper's nine formal results:
 
 - Lemma 2.2: `concreteSignature_eq_iff_reverse`, with
   `concreteSignature_eq_iff_signature_eq` and
@@ -16,8 +16,10 @@ Targeted paper results:
 - Proposition 4.1: `signature_and_markov_equivalence_incomparable`.
 - Theorem 4.2: `realizes_iff_cover_subset_edges_subset_comparable`,
   `choicesEquivFiber`, `card_reachabilityFiber`,
-  `fiber_pairwise_not_markovEquivalent`, `fiber_signature_set_eq`,
-  `signatureFiberEquivSum`, and `card_signatureFiber`.
+  `fiber_pairwise_not_markovEquivalent`, and `fiber_signature_set_eq`.
+- Corollary 4.3: `partial_identification_of_graph`, with
+  `signatureFiberEquivSum` and `card_signatureFiber` giving the explicit
+  disjoint-union equivalence and exact identified-set cardinality.
 - Proposition 5.2: `signature_measurability` and
   `full_signature_aggregation_eq`.
 - Proposition 6.1: `carbery_signature_blindness` and

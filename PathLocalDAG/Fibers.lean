@@ -538,4 +538,22 @@ theorem card_signatureFiber {n : ℕ} (P : FinitePoset n)
       rw [Nat.add_comm 1, pow_succ]
       omega
 
+/-- Paper Corollary 4.3: the full path-signature set sharply identifies the
+union of the reachability fibers of `P` and `P.dual`, and this identified set
+has the stated exact cardinality. -/
+theorem partial_identification_of_graph {n : ℕ} (P : FinitePoset n)
+    (htwo : AtLeastTwoComparablePairs P) :
+    (∀ G : DAG n, dagSignatureSet G = fullSignatures P ↔
+      reachabilityPoset G = P ∨ reachabilityPoset G = P.dual) ∧
+    Fintype.card (SignatureFiber P) =
+      2 ^ (1 + ((comparableEdges P).card - (coverEdges P).card)) := by
+  constructor
+  · intro G
+    constructor
+    · intro hG
+      exact (recovery_from_path_signatures htwo).1 hG.symm
+    · intro hG
+      exact ((recovery_from_path_signatures htwo).2 hG).symm
+  · exact card_signatureFiber P htwo
+
 end PathLocalDAG
