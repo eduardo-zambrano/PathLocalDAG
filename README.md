@@ -72,6 +72,34 @@ make
 The enumeration and figure illustrate the general results; none of the
 theorems depends on them.
 
+## How to cite
+
+If you use this formalization, please cite both the software archive and the
+accompanying paper. The Zenodo concept DOI below always resolves to the latest
+archived version.
+
+```bibtex
+@software{zambrano_pathlocaldag,
+  author    = {Zambrano, Eduardo},
+  title     = {{PathLocalDAG}: {L}ean~4 formalization for
+               ``Path signatures of causal {DAG}s:
+               ancestral recovery and edge identification''},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.21509893},
+  url       = {https://doi.org/10.5281/zenodo.21509893},
+  version   = {v0.1.0}
+}
+
+@unpublished{zambrano_pathsignatures,
+  author = {Zambrano, Eduardo},
+  title  = {Path signatures of causal {DAG}s:
+            ancestral recovery and edge identification},
+  year   = {2026},
+  note   = {Working paper}
+}
+```
+
 ## License
 
 The Lean formalization and computational replication materials are released
