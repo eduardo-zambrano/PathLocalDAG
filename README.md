@@ -69,3 +69,8 @@ make
 
 The enumeration and figure illustrate the general results; none of the
 theorems depends on them.
+
+## License
+
+The Lean formalization and computational replication materials are released
+under the MIT License. See [`LICENSE`](LICENSE).
