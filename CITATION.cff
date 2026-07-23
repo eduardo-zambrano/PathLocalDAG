@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using these metadata."
+title: "PathLocalDAG: Lean 4 formalization for \"Path signatures of causal DAGs: ancestral recovery and edge identification\""
+abstract: >-
+  Lean 4 formalization and computational replication for Eduardo Zambrano,
+  "Path signatures of causal DAGs: ancestral recovery and edge identification"
+  (2026). The development machine-checks the paper's nine formal results,
+  including the path-signature recovery theorem, the exact reachability-fiber
+  theorem, and the partial-identification corollary, with no sorry, admit, or
+  project-local axioms.
+authors:
+  - family-names: Zambrano
+    given-names: Eduardo
+    email: ezambran@calpoly.edu
+    # orcid: "https://orcid.org/0000-0000-0000-0000"  # add your ORCID here
+type: software
+license: MIT
+repository-code: "https://github.com/eduardo-zambrano/PathLocalDAG"
+keywords:
+  - causal inference
+  - directed acyclic graphs
+  - path signatures
+  - partial identification
+  - Lean 4
+  - formal verification
+  - Markov equivalence
