@@ -12,7 +12,7 @@ authors:
   - family-names: Zambrano
     given-names: Eduardo
     email: ezambran@calpoly.edu
-    # orcid: "https://orcid.org/0000-0000-0000-0000"  # add your ORCID here
+    orcid: "https://orcid.org/0000-0002-5991-9105"
 type: software
 license: MIT
 repository-code: "https://github.com/eduardo-zambrano/PathLocalDAG"
